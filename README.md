@@ -31,11 +31,12 @@ With Jenkins installed, we can proceed with adjusting the firewall settings. By 
 In order to ensure that this port is accessible, we will need to configure the built-in Ubuntu firewall (ufw). To open the 8080 port and enable the firewall, use the following commands:
 ```bash
 sudo ufw allow 8080
+sudo ufw allow 22
 ```
 ```bash
 sudo ufw enable
 ```
-Once done, test whether the firewall is active using this command:
+Also ensure that the port 8080 is open in AWS EC2 instance in security group. Once done, test whether the firewall is active using this command:
 ```bash
 sudo ufw status
 ```
